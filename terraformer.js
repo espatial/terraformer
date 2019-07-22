@@ -850,12 +850,12 @@
         for (i = 0; i < this.coordinates.length; i++) {
           var p1 = new Primitive({ type: "Polygon", coordinates: this.coordinates[i] });
 
-          if (p1.within(primitive) === false) {
-            return false;
+          if (p1.within(primitive) === true) {
+            return true;
           }
         }
 
-        return true;
+        return false;
       }
 
     }
